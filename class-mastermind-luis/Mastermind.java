@@ -1,6 +1,6 @@
 public class Mastermind { 
 
-  private Game game; 
+  private final Game game;
 
   public Mastermind(){ 
     this.game = new Game(); 
@@ -15,8 +15,8 @@ public class Mastermind {
   private boolean isResumed() { 
     String answer; 
     Console console = new Console(); 
-    do { 
-      answer = console.readString("¿Quieres continuar? (s/n): "); 
+    do {
+      answer = console.readString("¿Quieres continuar? (s/n): ");
     } while (!answer.equals("s") && !answer.equals("n")); 
     return answer.equals("s"); 
   } 
